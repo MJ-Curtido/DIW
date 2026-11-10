@@ -9,15 +9,22 @@
 @use "../tokens" as *;
 
 .hueco-ficha {
+  container-type: 1fr;
+  display: grid;
   margin-bottom: $space-xl;
 }
 
 .ficha {
+  background: var(--color-superficie);
+  border-radius: $radius-md;
   display: flex;
+  flex-direction: column;
   gap: $space-md;
   overflow: hidden;
-  border-radius: $radius-md;
-  background: var(--color-superficie);
+
+  @container (min-width: 36rem) {
+    flex-direction: row;
+  }
 }
 
 .ficha__cuerpo {
@@ -29,7 +36,7 @@
 }
 
 .ficha__precio {
+  color: var(--color-marca);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-marca);
 }
