@@ -5,6 +5,7 @@
 @use "../mixins" as *;
 
 .cabecera {
+  grid-area: cabecera;
   display: flex;
   flex-direction: column; // eje principal vertical: logo encima de la nav
   gap: $space-sm;

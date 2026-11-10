@@ -4,6 +4,7 @@
 @use "../mixins" as *;
 
 .heroe {
+  grid-area: heroe;
   position: relative;
 }
 
