@@ -5,3 +5,45 @@
 //    - los modificadores --oferta (que se note) y --agotada (la imagen en gris);
 //    - especificidad plana: una clase por selector (o .tarjeta-planta--mod .tarjeta-planta__elem). Sin etiquetas ni ids.
 @use "../tokens" as *;
+
+.tarjeta-planta {
+  max-height: 30rem;
+
+  &--oferta {
+    .tarjeta-planta__boton {
+      background-color: $green-500;
+      border-color: $green-500;
+    }
+
+    .tarjeta-planta__precio {
+      color: $green-500;
+    }
+
+    .tarjeta-planta__etiqueta {
+      color: $green-500;
+    }
+  }
+
+  &--agotada {
+    .tarjeta-planta__imagen {
+      filter: grayscale(100);
+    }
+
+    .tarjeta-planta__boton {
+      background-color: $color-accent;
+      border-color: $color-accent;
+    }
+
+    .tarjeta-planta__etiqueta {
+      color: $color-accent;
+    }
+
+    .tarjeta-planta__nombre {
+      color: $color-muted;
+    }
+
+    .tarjeta-planta__descripcion {
+      color: $color-muted;
+    }
+  }
+}
