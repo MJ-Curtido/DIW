@@ -20,9 +20,9 @@
 
   @include desde($bp-md) {
     grid-template-areas:
-      "principal consejos"
       "cabecera cabecera"
       "heroe heroe"
+      "principal consejos"
       "pie pie";
     grid-template-columns: 1fr 16rem;
   }
@@ -30,6 +30,12 @@
   @include desde($bp-lg) {
     max-width: 100rem;
     margin-inline: auto;
+    grid-template-areas:
+      "cabecera cabecera"
+      "heroe heroe"
+      "consejos principal"
+      "pie pie";
+    grid-template-columns: 16rem 1fr;
   }
 }
 
